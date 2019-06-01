@@ -53,7 +53,7 @@ public class GreetingsTest {
     }
 
     @Test
-    public void multiplyNameGivenWithCommaSeparator() {
+    public void twoNamesGivenWithCommaSeparator() {
         //given
         Greetings greetings = new Greetings();
         String name = "Adam,Iza";
@@ -63,6 +63,19 @@ public class GreetingsTest {
 
         //then
         Assert.assertEquals("Adam i Iza,witajcie!", result);
+    }
+
+    @Test
+    public void threeNamesGivenWithCommaSeparator() {
+        //given
+        Greetings greetings = new Greetings();
+        String name = "Adam,Iza,Robert";
+
+        // when
+        String result = greetings.greet(name);
+
+        //then
+        Assert.assertEquals("Adam, Iza i Robert, witajcie!", result);
     }
 
 }
