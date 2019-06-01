@@ -39,7 +39,6 @@ public class GreetingsTest {
     }
 
     @Test
-
     public void upperCaseNameGiven() {
 
         //given
@@ -51,6 +50,19 @@ public class GreetingsTest {
 
         //then
         Assert.assertEquals("WITAJ ADAM!", result);
+    }
+
+    @Test
+    public void multiplyNameGivenWithCommaSeparator() {
+        //given
+        Greetings greetings = new Greetings();
+        String name = "Adam,Iza";
+
+        // when
+        String result = greetings.greet(name);
+
+        //then
+        Assert.assertEquals("Adam i Iza,witajcie!", result);
     }
 
 }
