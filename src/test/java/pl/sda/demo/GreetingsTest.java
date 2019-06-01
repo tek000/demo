@@ -38,4 +38,19 @@ public class GreetingsTest {
         Assert.assertEquals("Witaj, mój przyjacielu", result);
     }
 
+    @Test
+
+    public void upperCaseNameGiven() {
+
+        //given
+        Greetings greetings = new Greetings();
+        String name = "ADAM";
+
+        // when
+        String result = greetings.greet(name);
+
+        //then
+        Assert.assertEquals("WITAJ ADAM!", result);
+    }
+
 }
