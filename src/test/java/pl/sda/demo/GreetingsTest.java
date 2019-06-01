@@ -95,7 +95,7 @@ public class GreetingsTest {
     public void NameWithDigitsGiven() {
         //given
         Greetings greetings = new Greetings();
-        String name = "Adam3";
+        String name = "3";
 
         // when
         String result = greetings.greet(name);

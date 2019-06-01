@@ -2,6 +2,7 @@ package pl.sda.demo;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * @author Mariusz Kowalczuk
@@ -15,6 +16,10 @@ public class Greetings {
 
 
         }
+
+     if (name.matches("(.*)(\\d+)(.*)")){
+         return "Z liczbami się nie witam.";
+     }
         if (name.contains(",")) {
             String[] split = name.split(",");
             List<String> strings = Arrays.asList(split);
