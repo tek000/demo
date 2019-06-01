@@ -90,4 +90,17 @@ public class GreetingsTest {
         //then
         Assert.assertEquals("Adam i Iza, witajcie! WITAJ ROBERT!", result);
     }
+
+    @Test
+    public void NameWithDigitsGiven() {
+        //given
+        Greetings greetings = new Greetings();
+        String name = "Adam3";
+
+        // when
+        String result = greetings.greet(name);
+
+        //then
+        Assert.assertEquals("Z liczbami się nie witam.", result);
+    }
 }
