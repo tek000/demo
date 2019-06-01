@@ -78,4 +78,16 @@ public class GreetingsTest {
         Assert.assertEquals("Adam, Iza i Robert, witajcie!", result);
     }
 
+    @Test
+    public void threeNamesGivenWithCommaSeparatorLastNameUppercase() {
+        //given
+        Greetings greetings = new Greetings();
+        String name = "Adam, Iza, ROBERT";
+
+        // when
+        String result = greetings.greet(name);
+
+        //then
+        Assert.assertEquals("Adam i Iza, witajcie! WITAJ ROBERT!", result);
+    }
 }
