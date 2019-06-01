@@ -62,7 +62,7 @@ public class GreetingsTest {
         String result = greetings.greet(name);
 
         //then
-        Assert.assertEquals("Adam i Iza,witajcie!", result);
+        Assert.assertEquals("Adam i Iza, witajcie!", result);
     }
 
     @Test
