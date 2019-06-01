@@ -22,4 +22,20 @@ public class GreetingsTest {
         //then
         Assert.assertEquals("Witaj Ala", result);
     }
+
+
+    @Test
+    public void greetNullSafe() {
+
+        //given
+        Greetings greetings = new Greetings();
+        String name = null;
+
+        // when
+        String result = greetings.greet(name);
+
+        //then
+        Assert.assertEquals("Witaj, mój przyjacielu", result);
+    }
+
 }
