@@ -10,7 +10,7 @@ public class Greetings {
             return "Witaj, mój przyjacielu";
         }
         if (!name.equals(name.toLowerCase())){
-            return "Witaj " + name.toUpperCase() + " !";
+            return "WITAJ " + name.toUpperCase() + "!";
         }
 
         return "Witaj " + name ;
